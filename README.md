@@ -148,3 +148,23 @@ const routes = require('./routes.js');
 
 routes(app, i18n);
 ```
+
+The way in wich we can reference text in our view is `#{i18n.__("Object key")}`
+
+For example:
+
+**es.json**
+```json
+{
+	"Title": "Internacionalización con Node.js",
+	"Welcome": "Hola, bienvenido al demo de i18n para Medellín JS",
+	"Button": "Soy un botón"
+}
+```
+
+**view (main.jade)**
+```jade
+h1(class='heading') #{i18n.__("Title")}
+```
+
+![that's it!](https://media.makeameme.org/created/we-did-it-sw5z69.jpg)
