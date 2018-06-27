@@ -19,15 +19,17 @@ Let's start creating a `server.js` file.
 'use strict';
 
 const express = require('express');
+const app = express();
 const port = process.env.PORT || 8080;
 
 app.listen(port);
 
 console.log('Server started on: ' + port);
+```
 
 run `npm run start on the terminal` to test the server.
 
-```
+
 As we are using Jade as template engline, we need to set that.
 
 ```js
