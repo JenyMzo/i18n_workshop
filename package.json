@@ -1,0 +1,19 @@
+{
+  "name": "i18n_workshop",
+  "version": "1.0.0",
+  "description": "Internationalization workshop for MedellinJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JenyMzo/i18n_workshop.git"
+  },
+  "author": "Jeny Mazo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JenyMzo/i18n_workshop/issues"
+  },
+  "homepage": "https://github.com/JenyMzo/i18n_workshop#readme"
+}

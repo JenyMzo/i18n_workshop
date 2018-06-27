@@ -1,0 +1,42 @@
+doctype html
+
+html(lang='en')
+  head
+    title i18n Demo
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/font-awesome.min.css")
+    link(rel="stylesheet", href="/css/simple-line-icons.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Muli")
+    link(rel="stylesheet", href="/css/device-mockups.min.css")
+    link(rel="stylesheet", href="/css/new-age.min.css")
+
+  body(id="page-top")
+    nav(class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav")
+      div(class="container")
+        a(class="navbar-brand js-scroll-trigger" href="#page-top") #{i18n.__("Title")}
+        button(class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation")
+          Menu
+          i(class="fa fa-bars")
+        div(class="collapse navbar-collapse" id="navbarResponsive")
+          ul(class="navbar-nav ml-auto")
+            li(class="nav-item")
+              a(class="nav-link js-scroll-trigger" href="/es")
+                img(src="/img/spain.png", alt="español")
+            li(class="nav-item")
+              a(class="nav-link js-scroll-trigger" href="/en")
+                img(src="/img/united-states.png", alt="english")
+            //- li(class="nav-item")
+            //-   a(class="nav-link js-scroll-trigger" href="/de")
+            //-     img(src="/img/germany.png", alt="deutch")
+
+    header(class="masthead")
+      div(class="container h-100")
+        div(class="row h-100")
+          div(class="col-lg-12 my-auto")
+            div(class="header-content mx-auto text-center")
+              h1(class="mb-6") #{i18n.__("Welcome")}
+              a(href="#download" class="btn btn-outline btn-xl js-scroll-trigger") #{i18n.__("Button")}
