@@ -5,11 +5,11 @@ Internationalization workshop for MedellinJS
 
 1. Install [Node.js LTS](http://nodejs.org/)
 2. Clone this repository
-3. Install express `npm install express`
-4. Install cookie-parser `npm install cookie-parser`
-5. Install express-session `npm install express-session`
-6. Install i18n `npm install i18n`
-7. Install jade `npm install jade`
+3. Install express `npm install express --s`
+4. Install cookie-parser `npm install cookie-parser --s`
+5. Install express-session `npm install express-session --s`
+6. Install i18n `npm install i18n --s`
+7. Install jade `npm install jade --s`
 
 ## Creating server file
 
