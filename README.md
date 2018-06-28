@@ -22,24 +22,20 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.listen(port);
+
+app.listen(port, (err) => {
+  if(err){
+    throw err;
+  } else {
+    console.log('Server started on: ' + port);
+  }
+});
 
 console.log('Server started on: ' + port);
 ```
 
 run `npm run start on the terminal` to test the server.
 
-
-As we are using Jade as template engline, we need to set that.
-
-```js
-app.set('view engine', 'jade');
-```
-Also, we need to serve static files (css and images) inside the assets folder.
-
-```js
-app.use(express.static('assets'));
-```
 
 ## App configuration
 
@@ -71,6 +67,16 @@ module.exports = (app, cookieParser, session, i18n) => {
 
   app.use(i18n.init);
 }
+```
+As we are using Jade as template engline, we need to set that.
+
+```js
+app.set('view engine', 'jade');
+```
+Also, we need to serve static files (css and images) inside the assets folder.
+
+```js
+app.use(express.static('assets'));
 ```
 
 Now, we are going to require and call this in our server file like this:
@@ -123,7 +129,7 @@ The routes function should receive the app (`express()`) and the i18n like this:
 module.exports = (app, i18n) => {
   app.get('/', function (req, res) {
     //let's validate that the cookie exists
-    if (!!req.cookies.i18n){
+    if (Boolean(req.cookies.i18n)){
       res.setLocale(req.cookies.i18n);
     }
     res.render('main', {
